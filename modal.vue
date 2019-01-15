@@ -5,9 +5,9 @@
     <button @click='showModal = !showModal' type="button" name="button" class="btn btn-primary">Modal</button>
       <!-- modal -->
     <transition name="modal">
-      <div class="modal-mask" v-if="showModal" @close="showModal = false">
+      <div class="modal-mask" v-if="showModal" @close="showModal = false" @click="showModal = false">
         <div class="modal-wrapper">
-          <div class="modal-container">
+          <div class="modal-container" @click.stop>
             <div class="modal-header">
               <slot name="header">
                 Heading
